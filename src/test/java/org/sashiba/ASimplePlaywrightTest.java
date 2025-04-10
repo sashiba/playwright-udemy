@@ -1,34 +1,34 @@
 package org.sashiba;
 
-import com.microsoft.playwright.Browser;
-import com.microsoft.playwright.BrowserType;
-import com.microsoft.playwright.Page;
-import com.microsoft.playwright.Playwright;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import com.microsoft.playwright.*;
+import org.junit.jupiter.api.*;
 
 import java.util.List;
 
 public class ASimplePlaywrightTest {
     private static final String URL = "https://practicesoftwaretesting.com";
 
-    private Playwright playwright;
-    private Browser browser;
+    private static Playwright playwright;
+    private static Browser browser;
+    private static BrowserContext browserContext;
     private Page page;
 
-    @BeforeEach
-    void setup() {
+    @BeforeAll
+    public static void setupBrowser() {
         playwright = Playwright.create();
         browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
                 .setHeadless(false)
                 .setArgs(List.of("--no-sandbox", "--disable-gpu", "--disable-extensions")));
-        page = browser.newPage();
+        browserContext = browser.newContext();
     }
 
-    @AfterEach
-    void tearDown() {
+    @BeforeEach
+    public void setup() {
+        page = browserContext.newPage();
+    }
+
+    @AfterAll
+    public static void tearDown() {
         browser.close();
         playwright.close();
     }
