@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-@UsePlaywright(ASimplePlaywrightTest.CustomOptions.class)
+@UsePlaywright(AnAnnotatedPlaywrightTest.CustomOptions.class)
 public class AnAnnotatedPlaywrightTest {
     private static final String URL = "https://practicesoftwaretesting.com";
 
