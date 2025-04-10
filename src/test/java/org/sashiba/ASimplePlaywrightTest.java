@@ -1,13 +1,28 @@
 package org.sashiba;
 
+import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.junit.Options;
+import com.microsoft.playwright.junit.OptionsFactory;
 import com.microsoft.playwright.junit.UsePlaywright;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-@UsePlaywright
+import java.util.List;
+
+@UsePlaywright(ASimplePlaywrightTest.CustomOptions.class)
 public class ASimplePlaywrightTest {
     private static final String URL = "https://practicesoftwaretesting.com";
+
+    public static class CustomOptions implements OptionsFactory {
+
+        @Override
+        public Options getOptions() {
+            return new Options()
+                    .setHeadless(false)
+                    .setLaunchOptions(new BrowserType.LaunchOptions().setArgs(List.of("--no-sandbox", "--disable-gpu", "--disable-extensions")));
+        }
+    }
 
 //    @UsePlaywright is doing setup() and tearDown(), we need to pass Page as parameter in tests
 //    private Playwright playwright;
