@@ -1,4 +1,4 @@
-package org.sashiba.toolshop.pageobjects;
+package org.sashiba.toolshop.contact.pageobjects;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;

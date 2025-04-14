@@ -9,8 +9,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.sashiba.fixtures.PlaywrightTestCase;
-import org.sashiba.toolshop.pageobjects.ProductList;
-import org.sashiba.toolshop.pageobjects.SearchComponent;
+import org.sashiba.toolshop.catalog.pageobjects.ProductList;
+import org.sashiba.toolshop.catalog.pageobjects.SearchComponent;
 
 import java.util.List;
 

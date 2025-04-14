@@ -1,4 +1,4 @@
-package org.sashiba.toolshop.pageobjects;
+package org.sashiba.toolshop.catalog.pageobjects;
 
 import com.microsoft.playwright.Page;
 
