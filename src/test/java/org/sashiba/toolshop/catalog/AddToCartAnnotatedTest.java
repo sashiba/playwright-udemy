@@ -1,16 +1,20 @@
 package org.sashiba.toolshop.catalog;
 
+import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.Tracing;
 import com.microsoft.playwright.assertions.PlaywrightAssertions;
 import com.microsoft.playwright.junit.UsePlaywright;
 import com.microsoft.playwright.options.AriaRole;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.sashiba.HeadlessChromeOptions;
 import org.sashiba.toolshop.catalog.pageobjects.*;
 
+import java.nio.file.Paths;
 import java.util.List;
 
 @UsePlaywright(HeadlessChromeOptions.class)
@@ -33,6 +37,24 @@ public class AddToCartAnnotatedTest {
     @BeforeEach
     void openHomePage(Page page) {
         page.navigate("https://practicesoftwaretesting.com");
+    }
+
+    @BeforeEach
+    void setupTrace(BrowserContext browserContext) {
+        browserContext.tracing().start(
+                new Tracing.StartOptions()
+                        .setScreenshots(true)
+                        .setSnapshots(true)
+                        .setSources(true)
+        );
+    }
+
+    @AfterEach
+    void recordTrace(BrowserContext browserContext) {
+        browserContext.tracing().stop(
+                new Tracing.StopOptions()
+                        .setPath(Paths.get("trace.zip"))
+        );
     }
 
     @DisplayName("Without Page Objects")
