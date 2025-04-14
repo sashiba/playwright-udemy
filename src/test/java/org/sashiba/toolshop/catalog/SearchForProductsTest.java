@@ -1,4 +1,4 @@
-package org.sashiba.toolshop;
+package org.sashiba.toolshop.catalog;
 
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
@@ -36,7 +36,7 @@ public class SearchForProductsTest extends PlaywrightTestCase {
 
     @DisplayName("With Page Objects")
     @Test
-    void withPageObjects() {
+    void whenSearchingByKeyword() {
         SearchComponent searchComponent = new SearchComponent(page);
         ProductList productList = new ProductList(page);
 

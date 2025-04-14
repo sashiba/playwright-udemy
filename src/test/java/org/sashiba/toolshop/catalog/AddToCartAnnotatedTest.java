@@ -1,19 +1,20 @@
-package org.sashiba.toolshop;
+package org.sashiba.toolshop.catalog;
 
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.assertions.PlaywrightAssertions;
+import com.microsoft.playwright.junit.UsePlaywright;
 import com.microsoft.playwright.options.AriaRole;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.sashiba.fixtures.PlaywrightTestCase;
+import org.sashiba.HeadlessChromeOptions;
 import org.sashiba.toolshop.pageobjects.*;
 
 import java.util.List;
 
-import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
-
-public class AddToCartTest extends PlaywrightTestCase {
+@UsePlaywright(HeadlessChromeOptions.class)
+public class AddToCartAnnotatedTest {
     protected SearchComponent searchComponent;
     protected ProductList productList;
     protected ProductDetails productDetails;
@@ -21,7 +22,7 @@ public class AddToCartTest extends PlaywrightTestCase {
     protected CheckoutCart checkoutCart;
 
     @BeforeEach
-    void setupTests() {
+    void setupTests(Page page) {
         searchComponent = new SearchComponent(page);
         productList = new ProductList(page);
         productDetails = new ProductDetails(page);
@@ -30,13 +31,13 @@ public class AddToCartTest extends PlaywrightTestCase {
     }
 
     @BeforeEach
-    void openHomePage() {
+    void openHomePage(Page page) {
         page.navigate("https://practicesoftwaretesting.com");
     }
 
     @DisplayName("Without Page Objects")
     @Test
-    void withoutPageObjects() {
+    void withoutPageObjects(Page page) {
         // Search for pliers
         page.waitForResponse("**/products/search?q=pliers", () -> {
             page.getByPlaceholder("Search").fill("pliers");
@@ -56,8 +57,8 @@ public class AddToCartTest extends PlaywrightTestCase {
         page.getByTestId("nav-cart").click();
 
         // check cart contents
-        assertThat(page.locator(".product-title").getByText("Combination Pliers")).isVisible();
-        assertThat(page.getByTestId("cart-quantity").getByText("3")).isVisible();
+        PlaywrightAssertions.assertThat(page.locator(".product-title").getByText("Combination Pliers")).isVisible();
+        PlaywrightAssertions.assertThat(page.getByTestId("cart-quantity").getByText("3")).isVisible();
     }
 
     @Test
