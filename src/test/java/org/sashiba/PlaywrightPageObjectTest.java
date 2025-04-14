@@ -78,6 +78,21 @@ public class PlaywrightPageObjectTest {
 
     @Nested
     class WhenAddingItemsToTheCart {
+        protected SearchComponent searchComponent;
+        protected ProductList productList;
+        protected ProductDetails productDetails;
+        protected NavBar navBar;
+        protected CheckoutCart checkoutCart;
+
+        @BeforeEach
+        void setup() {
+            searchComponent = new SearchComponent(page);
+            productList = new ProductList(page);
+            productDetails = new ProductDetails(page);
+            navBar = new NavBar(page);
+            checkoutCart = new CheckoutCart(page);
+        }
+
         @DisplayName("Without Page Objects")
         @Test
         void withoutPageObjects() {
@@ -106,12 +121,6 @@ public class PlaywrightPageObjectTest {
 
         @Test
         void withPageObjects() {
-            SearchComponent searchComponent = new SearchComponent(page);
-            ProductList productList = new ProductList(page);
-            ProductDetails productDetails = new ProductDetails(page);
-            NavBar navBar = new NavBar(page);
-            CheckoutCart checkoutCart = new CheckoutCart(page);
-
             // Search for pliers
             searchComponent.searchBy("pliers");
             // Show details page
@@ -132,6 +141,34 @@ public class PlaywrightPageObjectTest {
                     .satisfies(item -> {
                         Assertions.assertThat(item.title()).contains("Combination Pliers");
                         Assertions.assertThat(item.quantity()).isEqualTo(3);
+                        Assertions.assertThat(item.total()).isEqualTo(item.quantity() * item.price());
+                    });
+        }
+
+        @Test
+        void whenCheckingOutMultipleItems() {
+            navBar.openHomePage();
+
+            productList.viewProductDetails("Bolt Cutters");
+            productDetails.increaseQuantityBy(2);
+            productDetails.addToCart();
+
+            navBar.openHomePage();
+            productList.viewProductDetails("Slip Joint Pliers");
+            productDetails.addToCart();
+
+            navBar.openCart();
+            List<CartLineItem> cartLineItems = checkoutCart.getLineItems();
+            Assertions.assertThat(cartLineItems).hasSize(2);
+
+            List<String> productNames = cartLineItems.stream().map(CartLineItem::title).toList();
+            Assertions.assertThat(productNames).contains("Bolt Cutters", "Slip Joint Pliers");
+
+            Assertions.assertThat(cartLineItems)
+                    .allSatisfy(item -> {
+                        Assertions.assertThat(item.quantity()).isGreaterThanOrEqualTo(1);
+                        Assertions.assertThat(item.price()).isGreaterThan(0.0);
+                        Assertions.assertThat(item.total()).isGreaterThan(0.0);
                         Assertions.assertThat(item.total()).isEqualTo(item.quantity() * item.price());
                     });
         }
@@ -221,8 +258,8 @@ public class PlaywrightPageObjectTest {
                     .all()
                     .stream()
                     .map(row -> {
-                        String title = page.getByTestId("product-title").innerText();
-                        int quantity = Integer.parseInt(page.getByTestId("product-quantity").inputValue());
+                        String title = row.getByTestId("product-title").innerText().strip().replaceAll("\u00A0", "");
+                        int quantity = Integer.parseInt(row.getByTestId("product-quantity").inputValue());
                         Double price = price(row.getByTestId("product-price").innerText());
                         Double total = price(row.getByTestId("line-price").innerText());
                         return new CartLineItem(title, quantity, price, total);
