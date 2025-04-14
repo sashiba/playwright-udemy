@@ -7,10 +7,7 @@ import com.microsoft.playwright.assertions.PlaywrightAssertions;
 import com.microsoft.playwright.junit.UsePlaywright;
 import com.microsoft.playwright.options.AriaRole;
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.sashiba.HeadlessChromeOptions;
 import org.sashiba.toolshop.catalog.pageobjects.*;
 
@@ -50,10 +47,11 @@ public class AddToCartAnnotatedTest {
     }
 
     @AfterEach
-    void recordTrace(BrowserContext browserContext) {
+    void recordTrace(TestInfo testInfo, BrowserContext browserContext) {
+        String traceName = testInfo.getDisplayName().replace(" ", "-");
         browserContext.tracing().stop(
                 new Tracing.StopOptions()
-                        .setPath(Paths.get("trace.zip"))
+                        .setPath(Paths.get("target/traces/trace" + traceName + ".zip"))
         );
     }
 
