@@ -31,7 +31,7 @@ public class AddToCartTest extends PlaywrightTestCase {
 
     @BeforeEach
     void openHomePage() {
-        page.navigate("https://practicesoftwaretesting.com");
+        navBar.openHomePage();
     }
 
     @DisplayName("Without Page Objects")
@@ -60,6 +60,7 @@ public class AddToCartTest extends PlaywrightTestCase {
         assertThat(page.getByTestId("cart-quantity").getByText("3")).isVisible();
     }
 
+    @DisplayName("Checking for single item")
     @Test
     void whenCheckingOutASingleItem() {
         // Search for pliers
@@ -86,6 +87,7 @@ public class AddToCartTest extends PlaywrightTestCase {
                 });
     }
 
+    @DisplayName("Checking for multiple items")
     @Test
     void whenCheckingOutMultipleItems() {
         navBar.openHomePage();

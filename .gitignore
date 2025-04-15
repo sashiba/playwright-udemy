@@ -39,3 +39,4 @@ build/
 
 *.zip
 .allure
+*.txt

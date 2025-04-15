@@ -1,6 +1,7 @@
 package org.sashiba.toolshop.catalog.pageobjects;
 
 import com.microsoft.playwright.Page;
+import io.qameta.allure.Step;
 
 import java.util.List;
 
@@ -15,6 +16,7 @@ public class ProductList {
         return page.getByTestId("product-name").allInnerTexts();
     }
 
+    @Step("View product details")
     public void viewProductDetails(String product) {
         page.locator(".card").getByText(product).click();
     }
