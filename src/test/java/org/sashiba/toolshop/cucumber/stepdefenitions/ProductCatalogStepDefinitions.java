@@ -3,6 +3,7 @@ package org.sashiba.toolshop.cucumber.stepdefenitions;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.Before;
 import io.cucumber.java.DataTableType;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -74,5 +75,22 @@ public class ProductCatalogStepDefinitions {
     public void theFollowingProductsShouldBeDisplayed(List<ProductSummary> expectedProductSummaries) {
         var matchingProducts = productList.getProductSummaries();
         Assertions.assertThat(matchingProducts).containsExactlyInAnyOrderElementsOf(expectedProductSummaries);
+    }
+
+    @Then("no products should be displayed")
+    public void noProductsShouldBeDisplayed() {
+        var matchingProducts = productList.getProductSummaries();
+        Assertions.assertThat(matchingProducts).isEmpty();
+    }
+
+    @And("the message {string} should be displayed")
+    public void theMessageShouldBeDisplayed(String messageText) {
+        String actualMessage = productList.getSearchCompletedMessage();
+        Assertions.assertThat(actualMessage).isEqualTo("There are no products found.");
+    }
+
+    @And("she filters by {string}")
+    public void sheFiltersBy(String filterName) {
+        searchComponent.filterBy(filterName);
     }
 }

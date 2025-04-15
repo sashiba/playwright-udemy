@@ -25,4 +25,10 @@ public class SearchComponent {
             page.getByTestId("search-reset").click();
         });
     }
+
+    public void filterBy(String filterName) {
+        page.waitForResponse("**/products?**by_category=**", () -> {
+            page.getByLabel(filterName).click();
+        });
+    }
 }
