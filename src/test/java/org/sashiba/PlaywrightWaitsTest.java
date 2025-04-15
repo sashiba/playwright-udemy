@@ -26,7 +26,7 @@ public class PlaywrightWaitsTest {
         playwright = Playwright.create();
         playwright.selectors().setTestIdAttribute("data-test");
         browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
-                .setHeadless(false)
+                .setHeadless(true)
                 .setArgs(Arrays.asList("--no-sandbox", "--disable-extensions", "--disable-gpu")));
     }
 

@@ -17,7 +17,7 @@ public class ASimplePlaywrightTest {
     public static void setupBrowser() {
         playwright = Playwright.create();
         browser = playwright.chromium().launch(new BrowserType.LaunchOptions()
-                .setHeadless(false)
+                .setHeadless(true)
                 .setArgs(List.of("--no-sandbox", "--disable-gpu", "--disable-extensions")));
         browserContext = browser.newContext();
     }
