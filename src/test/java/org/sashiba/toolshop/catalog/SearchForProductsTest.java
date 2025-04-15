@@ -38,7 +38,7 @@ public class SearchForProductsTest extends PlaywrightTestCase {
                 .contains("Tape Measure 7.5m", "Measuring Tape", "Tape Measure 5m");
     }
 
-    @DisplayName("With Page Objects")
+    @DisplayName("When there are matching results")
     @Test
     void whenSearchingByKeyword() {
         SearchComponent searchComponent = new SearchComponent(page);
@@ -49,6 +49,19 @@ public class SearchForProductsTest extends PlaywrightTestCase {
 
         Assertions.assertThat(matchingProducts)
                 .contains("Tape Measure 7.5m", "Measuring Tape", "Tape Measure 5m");
+    }
+
+    @DisplayName("When there are matching results - failed test")
+    @Test
+    void whenSearchingByKeywordFail() {
+        SearchComponent searchComponent = new SearchComponent(page);
+        ProductList productList = new ProductList(page);
+
+        searchComponent.searchBy("tape");
+        List<String> matchingProducts = productList.getProductNames();
+
+        Assertions.assertThat(matchingProducts)
+                .contains("Tape Measure 7.5m", "Measuring Tape", "Tape Measure 15m");
     }
 
     @Test
