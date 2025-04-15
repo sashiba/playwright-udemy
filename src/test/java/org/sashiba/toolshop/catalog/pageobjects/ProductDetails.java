@@ -17,7 +17,6 @@ public class ProductDetails {
         for (int i = 1; i <= increment; i++) {
             page.getByTestId("increase-quantity").click();
         }
-        ScreenshotManager.takeScreenshot(page, "Quantity increase by");
     }
 
     @Step("Add to cart")

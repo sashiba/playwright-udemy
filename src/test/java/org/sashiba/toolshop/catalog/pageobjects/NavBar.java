@@ -14,13 +14,11 @@ public class NavBar {
     @Step("Open Cart Page")
     public void openCart() {
         page.getByTestId("nav-cart").click();
-        ScreenshotManager.takeScreenshot(page, "Shopping cart");
     }
 
     @Step("Open Home Page")
     public void openHomePage() {
         page.navigate("https://practicesoftwaretesting.com");
-        ScreenshotManager.takeScreenshot(page, "Home page");
     }
 
     @Step("Open Contact Page")
