@@ -40,3 +40,15 @@ Feature: Product Catalog
       Then the following products should be displayed:
         | Product  | Price  |
         | Wood Saw | $12.18 |
+
+  Rule: Customers should be able to sort products by various criteria
+    Scenario Outline: Sally sorts by different criteria
+      Given Sally is on the home page
+      When she sorts by "<Sort>"
+      Then the first product displayed should be "<First Product>"
+      Examples:
+        | Sort               | First Product       |
+        | Name (A - Z)       | Adjustable Wrench   |
+        | Name (Z - A)       | Wood Saw            |
+        | Price (High - Low) | Drawer Tool Cabinet |
+        | Price (Low - High) | Washers             |

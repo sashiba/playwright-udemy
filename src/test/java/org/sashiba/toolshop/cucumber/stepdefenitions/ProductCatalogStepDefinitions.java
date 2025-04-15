@@ -93,4 +93,16 @@ public class ProductCatalogStepDefinitions {
     public void sheFiltersBy(String filterName) {
         searchComponent.filterBy(filterName);
     }
+
+    @When("she sorts by {string}")
+    public void sheSortsBy(String sortFilter) {
+        searchComponent.sortBy(sortFilter);
+    }
+
+    @Then("the first product displayed should be {string}")
+    public void theFirstProductDisplayedShouldBe(String firstProductName) {
+        List<String> productNames = productList.getProductNames();
+
+        Assertions.assertThat(productNames).startsWith(firstProductName);
+    }
 }
