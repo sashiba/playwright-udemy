@@ -2,6 +2,8 @@ package org.sashiba.toolshop.contact;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.options.AriaRole;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -18,6 +20,8 @@ import java.util.List;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
+@DisplayName("Contact form")
+@Feature("Contacts")
 public class ContactFormTest extends PlaywrightTestCase {
 
     ContactForm contactForm;
@@ -31,6 +35,7 @@ public class ContactFormTest extends PlaywrightTestCase {
     }
 
     @DisplayName("Customers can use the contact form to contact us")
+    @Story("Contact form")
     @Test
     void completeForm() throws URISyntaxException {
         Path fileToUpload = Paths.get(ClassLoader.getSystemResource("data/sample-data.txt").toURI());
@@ -50,6 +55,7 @@ public class ContactFormTest extends PlaywrightTestCase {
     }
 
     @DisplayName("Mandatory fields")
+    @Story("Contact form")
     @ParameterizedTest
     @ValueSource(strings = {"First name", "Last name", "Email", "Message"})
     void mandatoryFields(String fieldName) {
@@ -70,6 +76,7 @@ public class ContactFormTest extends PlaywrightTestCase {
     }
 
     @DisplayName("The message must be at least 50 characters long")
+    @Story("Contact form")
     @Test
     void messageTooShort() {
         contactForm.setFirstName("Sarah-Jane");

@@ -2,6 +2,8 @@ package org.sashiba.toolshop.catalog;
 
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -13,6 +15,8 @@ import java.util.List;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
+@DisplayName("Shopping Cart")
+@Feature("Shopping Cart")
 public class AddToCartTest extends PlaywrightTestCase {
     protected SearchComponent searchComponent;
     protected ProductList productList;
@@ -61,6 +65,7 @@ public class AddToCartTest extends PlaywrightTestCase {
     }
 
     @DisplayName("Checking for single item")
+    @Story("Checking out a product")
     @Test
     void whenCheckingOutASingleItem() {
         // Search for pliers
@@ -88,6 +93,7 @@ public class AddToCartTest extends PlaywrightTestCase {
     }
 
     @DisplayName("Checking for multiple items")
+    @Story("Checking out a product")
     @Test
     void whenCheckingOutMultipleItems() {
         navBar.openHomePage();

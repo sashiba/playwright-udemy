@@ -2,6 +2,8 @@ package org.sashiba.toolshop.catalog;
 
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -16,6 +18,8 @@ import java.util.List;
 
 @Execution(ExecutionMode.SAME_THREAD)
 @DisplayName("Searching for products")
+@Feature("Product Catalog")
+@Story("Searching for products")
 public class SearchForProductsTest extends PlaywrightTestCase {
     @BeforeEach
     void openHomePage() {

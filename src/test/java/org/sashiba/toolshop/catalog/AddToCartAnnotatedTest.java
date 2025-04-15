@@ -14,6 +14,7 @@ import org.sashiba.toolshop.catalog.pageobjects.*;
 import java.nio.file.Paths;
 import java.util.List;
 
+@DisplayName("Shopping Cart - Annotated")
 @UsePlaywright(HeadlessChromeOptions.class)
 public class AddToCartAnnotatedTest {
     protected SearchComponent searchComponent;
