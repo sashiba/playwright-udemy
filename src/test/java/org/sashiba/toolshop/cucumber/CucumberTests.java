@@ -14,5 +14,5 @@ import org.junit.platform.suite.api.Suite;
                 "pretty," +
                 "html:target/cucumber-reports/cucumber.html"
 )
-public class CucumberTestSuite {
+public class CucumberTests {
 }
