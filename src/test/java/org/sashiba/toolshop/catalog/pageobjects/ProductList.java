@@ -2,6 +2,7 @@ package org.sashiba.toolshop.catalog.pageobjects;
 
 import com.microsoft.playwright.Page;
 import io.qameta.allure.Step;
+import org.sashiba.fixtures.ScreenshotManager;
 
 import java.util.List;
 
@@ -18,6 +19,7 @@ public class ProductList {
 
     @Step("View product details")
     public void viewProductDetails(String product) {
+        ScreenshotManager.takeScreenshot(page, "View product details for " + product);
         page.locator(".card").getByText(product).click();
     }
 

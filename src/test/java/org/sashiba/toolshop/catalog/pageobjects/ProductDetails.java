@@ -3,6 +3,7 @@ package org.sashiba.toolshop.catalog.pageobjects;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.AriaRole;
 import io.qameta.allure.Step;
+import org.sashiba.fixtures.ScreenshotManager;
 
 public class ProductDetails {
     private final Page page;
@@ -16,6 +17,7 @@ public class ProductDetails {
         for (int i = 1; i <= increment; i++) {
             page.getByTestId("increase-quantity").click();
         }
+        ScreenshotManager.takeScreenshot(page, "Quantity increase by");
     }
 
     @Step("Add to cart")
@@ -27,5 +29,6 @@ public class ProductDetails {
                     page.getByRole(AriaRole.ALERT).click();
                 } //callback - code that triggers the request
         );
+        ScreenshotManager.takeScreenshot(page, "Added to cart");
     }
 }

@@ -1,10 +1,12 @@
 package org.sashiba.fixtures;
 
 import com.microsoft.playwright.*;
+import io.qameta.allure.Allure;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 
+import java.io.ByteArrayInputStream;
 import java.util.Arrays;
 
 public abstract class PlaywrightTestCase {
@@ -32,6 +34,7 @@ public abstract class PlaywrightTestCase {
 
     @AfterEach
     void closeContext() {
+        takeScreenshot("End of test");
         browserContext.close();
     }
 
@@ -42,6 +45,14 @@ public abstract class PlaywrightTestCase {
 
         playwright.get().close();
         playwright.remove();
+    }
+
+    protected void takeScreenshot(String name) {
+        var screenshot = page.screenshot(
+                new Page.ScreenshotOptions()
+                        .setFullPage(true)
+        );
+        Allure.addAttachment(name, new ByteArrayInputStream(screenshot));
     }
 
 }
