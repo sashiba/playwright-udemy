@@ -1,91 +1,90 @@
 package org.sashiba;
 
+import com.microsoft.playwright.Page;
 import com.microsoft.playwright.junit.UsePlaywright;
+import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Test;
+import org.sashiba.fixtures.PlaywrightTestCase;
+
+import java.util.List;
+
+import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
 @UsePlaywright(HeadlessChromeOptions.class)
-public class PlaywrightCollectionsTest {
+public class PlaywrightCollectionsTest extends PlaywrightTestCase {
 
-//    @BeforeEach
-//    void setUp(Page page) {
-//        openPage(page);
-//    }
-//
-//    private void openPage(Page page) {
-//        page.navigate("https://practicesoftwaretesting.com");
-//        page.waitForCondition(() -> page.getByTestId("product-name").count() > 0);
-//    }
-//
-//    @DisplayName("Counting items in a list")
-//    @Test
-//    void countingItemsOnThePage(Page page) {
-//
-//        int itemsOnThePage = page.locator(".card").count();
-//
-//        Assertions.assertThat(itemsOnThePage).isGreaterThan(0);
-//    }
-//
-//    @DisplayName("Finding the first matching item")
-//    @Test
-//    void findingTheFirstMatchingItem(Page page) {
-//
-//        page.locator(".card").first().click();
-//
-//    }
-//
-//    @DisplayName("Finding the nth matching item")
-//    @Test
-//    void findingNthMatchingItem(Page page) {
-//
-//        page.locator(".card").nth(2).click();
-//
-//    }
-//
-//    @DisplayName("Finding the last matching item")
-//    @Test
-//    void findingLastMatchingItem(Page page) {
-//
-//        page.locator(".card").last().click();
-//
-//    }
-//
-//    @DisplayName("Finding text in a list")
-//    @Nested
-//    class FindingTheTextInAList {
-//
-//        @DisplayName("and finding all the text values ")
-//        @Test
-//        void withAllTextContents(Page page) {
-//
-//            List<String> itemNames = page.getByTestId("product-name").allTextContents();
-//
-//
-//            Assertions.assertThat(itemNames).contains(" Combination Pliers ",
-//                    " Pliers ",
-//                    " Bolt Cutters ",
-//                    " Long Nose Pliers ",
-//                    " Slip Joint Pliers ",
-//                    " Claw Hammer with Shock Reduction Grip ",
-//                    " Hammer ",
-//                    " Claw Hammer ",
-//                    " Thor Hammer ");
-//        }
-//
-//        @DisplayName("and asserting with  hasText")
-//        @Test
-//        void withHasText(Page page) {
-//            assertThat(page.getByTestId("product-name"))
-//                    .hasText(new String[]{
-//                            " Combination Pliers ",
-//                            " Pliers ",
-//                            " Bolt Cutters ",
-//                            " Long Nose Pliers ",
-//                            " Slip Joint Pliers ",
-//                            " Claw Hammer with Shock Reduction Grip ",
-//                            " Hammer ",
-//                            " Claw Hammer ",
-//                            " Thor Hammer "
-//                    });
-//        }
-//    }
+    @BeforeEach
+    void setUp(Page page) {
+        openPage(page);
+    }
 
+    private void openPage(Page page) {
+        page.navigate("https://practicesoftwaretesting.com");
+        page.waitForCondition(() -> page.getByTestId("product-name").count() > 0);
+    }
+
+    @DisplayName("Counting items in a list")
+    @Test
+    void countingItemsOnThePage(Page page) {
+        int itemsOnThePage = page.locator(".card").count();
+        Assertions.assertThat(itemsOnThePage).isGreaterThan(0);
+    }
+
+    @DisplayName("Finding the first matching item")
+    @Test
+    void findingTheFirstMatchingItem(Page page) {
+        page.locator(".card").first().click();
+    }
+
+    @DisplayName("Finding the nth matching item")
+    @Test
+    void findingNthMatchingItem(Page page) {
+        page.locator(".card").nth(2).click();
+    }
+
+    @DisplayName("Finding the last matching item")
+    @Test
+    void findingLastMatchingItem(Page page) {
+        page.locator(".card").last().click();
+    }
+
+    @DisplayName("Finding text in a list")
+    @Nested
+    class FindingTheTextInAList {
+
+        @DisplayName("and finding all the text values ")
+        @Test
+        void withAllTextContents(Page page) {
+            List<String> itemNames = page.getByTestId("product-name").allTextContents();
+            Assertions.assertThat(itemNames).contains(" Combination Pliers ",
+                    " Pliers ",
+                    " Bolt Cutters ",
+                    " Long Nose Pliers ",
+                    " Slip Joint Pliers ",
+                    " Claw Hammer with Shock Reduction Grip ",
+                    " Hammer ",
+                    " Claw Hammer ",
+                    " Thor Hammer ");
+        }
+
+        @DisplayName("and asserting with  hasText")
+        @Test
+        void withHasText(Page page) {
+            assertThat(page.getByTestId("product-name"))
+                    .hasText(new String[]{
+                            " Combination Pliers ",
+                            " Pliers ",
+                            " Bolt Cutters ",
+                            " Long Nose Pliers ",
+                            " Slip Joint Pliers ",
+                            " Claw Hammer with Shock Reduction Grip ",
+                            " Hammer ",
+                            " Claw Hammer ",
+                            " Thor Hammer "
+                    });
+        }
+    }
 }
