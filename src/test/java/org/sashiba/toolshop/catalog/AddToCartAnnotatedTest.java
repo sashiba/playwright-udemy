@@ -9,6 +9,7 @@ import com.microsoft.playwright.options.AriaRole;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.*;
 import org.sashiba.HeadlessChromeOptions;
+import org.sashiba.fixtures.TakesFinalScreenshot;
 import org.sashiba.toolshop.catalog.pageobjects.*;
 
 import java.nio.file.Paths;
@@ -16,7 +17,7 @@ import java.util.List;
 
 @DisplayName("Shopping Cart - Annotated")
 @UsePlaywright(HeadlessChromeOptions.class)
-public class AddToCartAnnotatedTest {
+public class AddToCartAnnotatedTest implements TakesFinalScreenshot {
     protected SearchComponent searchComponent;
     protected ProductList productList;
     protected ProductDetails productDetails;
