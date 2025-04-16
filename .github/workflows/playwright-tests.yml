@@ -26,8 +26,8 @@ jobs:
       - name: Setup JDK
         uses: actions/setup-java@v4
         with:
-          java-version: '21'
-          distribution: 'adopt'
+          java-version: '23'
+          distribution: 'oracle'
 
       # Step 3: Install Maven 3.9.9
       - name: Setup Maven Action
