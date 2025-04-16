@@ -1,0 +1,149 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Apr 16 09:59:49 UTC 2025","Wed Apr 16 09:59:50 UTC 2025","1101","","Contact form","","org.sashiba.toolshop.contact.ContactFormTest","dropdownFieldValues","Dropdown lists",""
+"passed","Wed Apr 16 09:58:48 UTC 2025","Wed Apr 16 09:58:51 UTC 2025","2524","","Making assertions about data values","","org.sashiba.PlaywrightAssertionsTest$MakingAssertionsAboutDataValues","shouldSortInReverseAlphabeticalOrder","shouldSortInReverseAlphabeticalOrder()",""
+"passed","Wed Apr 16 09:59:19 UTC 2025","Wed Apr 16 09:59:20 UTC 2025","886","","Interacting with text fields","","org.sashiba.PlaywrightFormsTest$WhenInteractingWithTextFields","locateTheSendButtonByCssClass","By CSS class",""
+"passed","Wed Apr 16 09:59:31 UTC 2025","Wed Apr 16 09:59:32 UTC 2025","912","","Locating elements by Labels and Placeholders","","org.sashiba.PlaywrightLocatorsTest$LocatingElementsByLabelsPlaceHolders","byPlaceholder","Using a placeholder text",""
+"passed","Wed Apr 16 09:58:53 UTC 2025","Wed Apr 16 09:58:54 UTC 2025","927","","Making assertions about the contents of a field","","org.sashiba.PlaywrightAssertionsTest$LocatingElementsUsingCSS","fieldValues","Checking the value of a field",""
+"passed","Wed Apr 16 09:59:34 UTC 2025","Wed Apr 16 09:59:43 UTC 2025","8793","","Shopping Cart","","org.sashiba.toolshop.catalog.AddToCartTest","whenCheckingOutMultipleItems","Checking for multiple items",""
+"passed","Wed Apr 16 09:58:37 UTC 2025","Wed Apr 16 09:58:43 UTC 2025","5271","","org.sashiba.PlaywrightPageObjectTest.WhenAddingItemsToTheCart","","org.sashiba.PlaywrightPageObjectTest$WhenAddingItemsToTheCart","withPageObjects","withPageObjects()",""
+"passed","Wed Apr 16 09:58:31 UTC 2025","Wed Apr 16 09:58:33 UTC 2025","1920","","org.sashiba.AnnotatedAddingItemsToTheCartTest","","org.sashiba.AnnotatedAddingItemsToTheCartTest","searchForPliers","Search for pliers",""
+"passed","Wed Apr 16 09:59:48 UTC 2025","Wed Apr 16 09:59:49 UTC 2025","1087","","Contact form","","org.sashiba.toolshop.contact.ContactFormTest","locateTheSendButtonByCssClass","By CSS class",""
+"broken","Wed Apr 16 10:00:57 UTC 2025","Wed Apr 16 10:01:01 UTC 2025","3926","","Product Catalog","","The one where Sally searches for an Adjustable Wrench","","The one where Sally searches for an Adjustable Wrench","  As a customer,
+  I want to easily search, filter and sort products in the catalog
+  So that I can find what I need quickly.
+
+  Sally is an online customer"
+"passed","Wed Apr 16 09:58:55 UTC 2025","Wed Apr 16 09:58:56 UTC 2025","1516","","org.sashiba.PlaywrightWaitsTest.WaitingForAPICalls","","org.sashiba.PlaywrightWaitsTest$WaitingForAPICalls","sortByDescendingPrice","sortByDescendingPrice()",""
+"passed","Wed Apr 16 09:59:16 UTC 2025","Wed Apr 16 09:59:17 UTC 2025","987","","Interacting with text fields","","org.sashiba.PlaywrightFormsTest$WhenInteractingWithTextFields","locateTheSendButtonByAttribute","By attribute",""
+"passed","Wed Apr 16 09:59:20 UTC 2025","Wed Apr 16 09:59:20 UTC 2025","875","","Interacting with text fields","","org.sashiba.PlaywrightFormsTest$WhenInteractingWithTextFields","dropdownFieldValues","Dropdown lists",""
+"passed","Wed Apr 16 09:58:46 UTC 2025","Wed Apr 16 09:58:48 UTC 2025","2211","","Making assertions about data values","","org.sashiba.PlaywrightAssertionsTest$MakingAssertionsAboutDataValues","shouldSortInAlphabeticalOrder","shouldSortInAlphabeticalOrder()",""
+"passed","Wed Apr 16 09:59:23 UTC 2025","Wed Apr 16 09:59:24 UTC 2025","1345","","Interacting with text fields","","org.sashiba.PlaywrightFormsTest$WhenInteractingWithTextFields","mandatoryFields","Mandatory fields [2] fieldName=Last name",""
+"failed","Wed Apr 16 09:59:51 UTC 2025","Wed Apr 16 09:59:57 UTC 2025","5988","","Contact form","","org.sashiba.toolshop.contact.ContactFormTest","mandatoryFields","Mandatory fields [1] fieldName=First name",""
+"passed","Wed Apr 16 09:59:50 UTC 2025","Wed Apr 16 09:59:51 UTC 2025","960","","Contact form","","org.sashiba.toolshop.contact.ContactFormTest","fileUploads","File uploads",""
+"broken","Wed Apr 16 10:00:57 UTC 2025","Wed Apr 16 10:01:01 UTC 2025","3804","","Product Catalog","","The one where Sally searches for a product that doesn't exist","","The one where Sally searches for a product that doesn't exist","  As a customer,
+  I want to easily search, filter and sort products in the catalog
+  So that I can find what I need quickly.
+
+  Sally is an online customer"
+"broken","Wed Apr 16 10:01:01 UTC 2025","Wed Apr 16 10:01:03 UTC 2025","2435","","Product Catalog","","The one where Sally searches for a more general term1","","The one where Sally searches for a more general term1","  As a customer,
+  I want to easily search, filter and sort products in the catalog
+  So that I can find what I need quickly.
+
+  Sally is an online customer"
+"passed","Wed Apr 16 09:59:43 UTC 2025","Wed Apr 16 09:59:44 UTC 2025","1073","","Contact form","","org.sashiba.toolshop.contact.ContactFormTest","invalidEmailField","The email address must be correctly formatted 'not-an.email.com' should be rejected",""
+"passed","Wed Apr 16 09:58:44 UTC 2025","Wed Apr 16 09:58:45 UTC 2025","1485","","org.sashiba.PlaywrightPageObjectTest.WhenSearchingProductsByKeyword","","org.sashiba.PlaywrightPageObjectTest$WhenSearchingProductsByKeyword","withPageObjects","With Page Objects",""
+"passed","Wed Apr 16 10:00:03 UTC 2025","Wed Apr 16 10:00:05 UTC 2025","1610","","Contact form","","org.sashiba.toolshop.contact.ContactFormTest","mandatoryFields","Mandatory fields [3] fieldName=Email",""
+"passed","Wed Apr 16 09:59:39 UTC 2025","Wed Apr 16 09:59:40 UTC 2025","1465","","Contact form","","org.sashiba.toolshop.contact.ContactFormTest","locateTheSendButtonByAttribute","By attribute",""
+"passed","Wed Apr 16 09:58:16 UTC 2025","Wed Apr 16 09:58:18 UTC 2025","1465","","Searching for products","","org.sashiba.toolshop.catalog.SearchForProductsTest","whenThereIsNoMatchingProduct","When there are no matching results",""
+"passed","Wed Apr 16 09:58:49 UTC 2025","Wed Apr 16 09:58:51 UTC 2025","1760","","org.sashiba.PlaywrightRestAPITest.MakingAPICalls","","org.sashiba.PlaywrightRestAPITest$MakingAPICalls","checkKnownProducts","Check presence of known products Checking product Product[name=Phillips Screwdriver, price=4.92]",""
+"passed","Wed Apr 16 09:58:34 UTC 2025","Wed Apr 16 09:58:38 UTC 2025","4583","","org.sashiba.PlaywrightRestAPITest.MakingAPICalls","","org.sashiba.PlaywrightRestAPITest$MakingAPICalls","checkKnownProducts","Check presence of known products Checking product Product[name=Sledgehammer, price=17.75]",""
+"broken","Wed Apr 16 09:59:58 UTC 2025","Wed Apr 16 10:00:40 UTC 2025","41676","","Shopping Cart - Annotated","","org.sashiba.toolshop.catalog.AddToCartAnnotatedTest","whenCheckingOutMultipleItems","whenCheckingOutMultipleItems()",""
+"broken","Wed Apr 16 10:00:57 UTC 2025","Wed Apr 16 10:01:02 UTC 2025","4680","","Product Catalog","","The one where Sally only wants to see Hand Saws","","The one where Sally only wants to see Hand Saws","  As a customer,
+  I want to easily search, filter and sort products in the catalog
+  So that I can find what I need quickly.
+
+  Sally is an online customer"
+"passed","Wed Apr 16 09:58:28 UTC 2025","Wed Apr 16 09:58:31 UTC 2025","2878","","org.sashiba.login.LoginWithRegisteredUserTest","","org.sashiba.login.LoginWithRegisteredUserTest","shouldLoginWithRegisteredUser","Should be able to login with registered user",""
+"passed","Wed Apr 16 09:59:27 UTC 2025","Wed Apr 16 09:59:29 UTC 2025","1808","","Locating elements by role","","org.sashiba.PlaywrightLocatorsTest$LocatingElementsByRole","byHeaderRole","Using the HEADING role",""
+"passed","Wed Apr 16 09:59:47 UTC 2025","Wed Apr 16 09:59:48 UTC 2025","937","","Contact form","","org.sashiba.toolshop.contact.ContactFormTest","messageTooShort","The message must be at least 50 characters long",""
+"passed","Wed Apr 16 09:59:24 UTC 2025","Wed Apr 16 09:59:25 UTC 2025","1259","","Interacting with text fields","","org.sashiba.PlaywrightFormsTest$WhenInteractingWithTextFields","mandatoryFields","Mandatory fields [3] fieldName=Email",""
+"passed","Wed Apr 16 09:58:56 UTC 2025","Wed Apr 16 09:59:00 UTC 2025","4144","","org.sashiba.PlaywrightWaitsTest.WaitingForElementsToAppearAndDisappear","","org.sashiba.PlaywrightWaitsTest$WaitingForElementsToAppearAndDisappear","shouldUpdateCartItemCount","Should update the cart item count",""
+"passed","Wed Apr 16 09:59:28 UTC 2025","Wed Apr 16 09:59:29 UTC 2025","1316","","org.sashiba.PlaywrightCollectionsTest","","org.sashiba.PlaywrightCollectionsTest","findingTheFirstMatchingItem","Finding the first matching item",""
+"passed","Wed Apr 16 09:59:49 UTC 2025","Wed Apr 16 09:59:58 UTC 2025","9852","","Shopping Cart","","org.sashiba.toolshop.catalog.AddToCartTest","withoutPageObjects","Without Page Objects",""
+"passed","Wed Apr 16 09:59:17 UTC 2025","Wed Apr 16 09:59:18 UTC 2025","902","","Locating elements using CSS","","org.sashiba.PlaywrightLocatorsTest$LocatingElementsUsingCSS","byCSSClass","By CSS class",""
+"broken","Wed Apr 16 10:01:01 UTC 2025","Wed Apr 16 10:01:03 UTC 2025","2327","","Product Catalog","","The one where Sally searches for a more general term2","","The one where Sally searches for a more general term2","  As a customer,
+  I want to easily search, filter and sort products in the catalog
+  So that I can find what I need quickly.
+
+  Sally is an online customer"
+"passed","Wed Apr 16 09:58:45 UTC 2025","Wed Apr 16 09:58:47 UTC 2025","1877","","org.sashiba.PlaywrightRestAPITest.MakingAPICalls","","org.sashiba.PlaywrightRestAPITest$MakingAPICalls","checkKnownProducts","Check presence of known products Checking product Product[name=Angled Spanner, price=14.14]",""
+"broken","Wed Apr 16 10:00:57 UTC 2025","Wed Apr 16 10:01:01 UTC 2025","3833","","Product Catalog","","Sally sorts by different criteria","","Sally sorts by different criteria","  As a customer,
+  I want to easily search, filter and sort products in the catalog
+  So that I can find what I need quickly.
+
+  Sally is an online customer"
+"passed","Wed Apr 16 09:58:55 UTC 2025","Wed Apr 16 09:58:56 UTC 2025","702","","org.sashiba.ASimplePlaywrightTest","","org.sashiba.ASimplePlaywrightTest","pageTitleTest","pageTitleTest()",""
+"passed","Wed Apr 16 09:59:29 UTC 2025","Wed Apr 16 09:59:30 UTC 2025","1710","","Locating elements by role","","org.sashiba.PlaywrightLocatorsTest$LocatingElementsByRole","byHeaderRoleLevel","Using the HEADING role and level",""
+"passed","Wed Apr 16 09:59:32 UTC 2025","Wed Apr 16 09:59:33 UTC 2025","1230","","Finding text in a list","","org.sashiba.PlaywrightCollectionsTest$FindingTheTextInAList","withAllTextContents","and finding all the text values",""
+"passed","Wed Apr 16 09:59:25 UTC 2025","Wed Apr 16 09:59:26 UTC 2025","847","","Interacting with text fields","","org.sashiba.PlaywrightFormsTest$WhenInteractingWithTextFields","mandatoryFields","Mandatory fields [4] fieldName=Message",""
+"passed","Wed Apr 16 09:59:20 UTC 2025","Wed Apr 16 09:59:23 UTC 2025","2670","","Locating elements by Test id","","org.sashiba.PlaywrightLocatorsTest$LocatingElementsByTestId","byTestId","Using a custom data-test field",""
+"passed","Wed Apr 16 09:59:19 UTC 2025","Wed Apr 16 09:59:20 UTC 2025","855","","Locating elements using CSS","","org.sashiba.PlaywrightLocatorsTest$LocatingElementsUsingCSS","byId","By Id",""
+"passed","Wed Apr 16 09:59:03 UTC 2025","Wed Apr 16 09:59:05 UTC 2025","2337","","Nested locators","","org.sashiba.PlaywrightLocatorsTest$NestedLocators","filteringMenuItems","filtering locators by text",""
+"passed","Wed Apr 16 10:00:40 UTC 2025","Wed Apr 16 10:00:46 UTC 2025","5620","","Shopping Cart - Annotated","","org.sashiba.toolshop.catalog.AddToCartAnnotatedTest","whenCheckingOutASingleItem","whenCheckingOutASingleItem()",""
+"passed","Wed Apr 16 09:59:32 UTC 2025","Wed Apr 16 09:59:35 UTC 2025","2619","","Locating elements by Text","","org.sashiba.PlaywrightLocatorsTest$LocatingElementsByText","byText","Locating an element by text contents",""
+"passed","Wed Apr 16 09:59:05 UTC 2025","Wed Apr 16 09:59:07 UTC 2025","1658","","Locating visible elements","","org.sashiba.PlaywrightLocatorsTest$LocatingVisibleElements","locateVisibleItems","Finding only visible elements",""
+"passed","Wed Apr 16 09:58:19 UTC 2025","Wed Apr 16 09:58:22 UTC 2025","2258","","Searching for products","","org.sashiba.toolshop.catalog.SearchForProductsTest","clearingTheSearchResults","When the user clears a previous search results",""
+"passed","Wed Apr 16 09:59:45 UTC 2025","Wed Apr 16 09:59:47 UTC 2025","2131","","Contact form","","org.sashiba.toolshop.contact.ContactFormTest","completeForm","Customers can use the contact form to contact us",""
+"passed","Wed Apr 16 09:59:18 UTC 2025","Wed Apr 16 09:59:19 UTC 2025","946","","Interacting with text fields","","org.sashiba.PlaywrightFormsTest$WhenInteractingWithTextFields","completeForm","Complete form",""
+"passed","Wed Apr 16 09:58:40 UTC 2025","Wed Apr 16 09:58:42 UTC 2025","1769","","org.sashiba.PlaywrightRestAPITest.MakingAPICalls","","org.sashiba.PlaywrightRestAPITest$MakingAPICalls","checkKnownProducts","Check presence of known products Checking product Product[name=Court Hammer, price=18.63]",""
+"passed","Wed Apr 16 09:59:26 UTC 2025","Wed Apr 16 09:59:28 UTC 2025","1813","","org.sashiba.PlaywrightCollectionsTest","","org.sashiba.PlaywrightCollectionsTest","findingNthMatchingItem","Finding the nth matching item",""
+"passed","Wed Apr 16 09:59:40 UTC 2025","Wed Apr 16 09:59:42 UTC 2025","1012","","Contact form","","org.sashiba.toolshop.contact.ContactFormTest","textFieldValues","Text fields",""
+"passed","Wed Apr 16 09:59:17 UTC 2025","Wed Apr 16 09:59:18 UTC 2025","839","","Interacting with text fields","","org.sashiba.PlaywrightFormsTest$WhenInteractingWithTextFields","textFieldValues","Text fields",""
+"passed","Wed Apr 16 09:58:42 UTC 2025","Wed Apr 16 09:58:44 UTC 2025","1729","","org.sashiba.PlaywrightRestAPITest.MakingAPICalls","","org.sashiba.PlaywrightRestAPITest$MakingAPICalls","checkKnownProducts","Check presence of known products Checking product Product[name=Wood Saw, price=12.18]",""
+"passed","Wed Apr 16 09:58:52 UTC 2025","Wed Apr 16 09:58:53 UTC 2025","967","","Making assertions about the contents of a field","","org.sashiba.PlaywrightAssertionsTest$LocatingElementsUsingCSS","textFieldValues","Checking the value of a text field",""
+"passed","Wed Apr 16 09:59:11 UTC 2025","Wed Apr 16 09:59:13 UTC 2025","1733","","org.sashiba.PlaywrightWaitsTest.AutomaticWaits","","org.sashiba.PlaywrightWaitsTest$AutomaticWaits","shouldFilterProductsByCategory","Should filter products by category",""
+"passed","Wed Apr 16 09:59:15 UTC 2025","Wed Apr 16 09:59:17 UTC 2025","2830","","Locating elements by text using CSS","","org.sashiba.PlaywrightLocatorsTest$LocatingElementsByTextUsingCSS","locateAProductItemByTextMatches","Using :text-matches",""
+"passed","Wed Apr 16 09:58:51 UTC 2025","Wed Apr 16 09:58:53 UTC 2025","1771","","org.sashiba.PlaywrightRestAPITest.MakingAPICalls","","org.sashiba.PlaywrightRestAPITest$MakingAPICalls","checkKnownProducts","Check presence of known products Checking product Product[name=Mini Screwdriver, price=13.96]",""
+"broken","Wed Apr 16 10:01:03 UTC 2025","Wed Apr 16 10:01:05 UTC 2025","1616","","Product Catalog","","Sally sorts by different criteria","","Sally sorts by different criteria","  As a customer,
+  I want to easily search, filter and sort products in the catalog
+  So that I can find what I need quickly.
+
+  Sally is an online customer"
+"passed","Wed Apr 16 09:59:33 UTC 2025","Wed Apr 16 09:59:34 UTC 2025","1234","","Finding text in a list","","org.sashiba.PlaywrightCollectionsTest$FindingTheTextInAList","withHasText","and asserting with  hasText",""
+"passed","Wed Apr 16 09:58:11 UTC 2025","Wed Apr 16 09:58:14 UTC 2025","2558","","org.sashiba.AddingItemsToTheCartTest","","org.sashiba.AddingItemsToTheCartTest","searchForPliers","Search for pliers",""
+"broken","Wed Apr 16 10:01:02 UTC 2025","Wed Apr 16 10:01:04 UTC 2025","2498","","Product Catalog","","Sally sorts by different criteria","","Sally sorts by different criteria","  As a customer,
+  I want to easily search, filter and sort products in the catalog
+  So that I can find what I need quickly.
+
+  Sally is an online customer"
+"passed","Wed Apr 16 09:58:43 UTC 2025","Wed Apr 16 09:58:44 UTC 2025","1343","","org.sashiba.PlaywrightPageObjectTest.WhenSearchingProductsByKeyword","","org.sashiba.PlaywrightPageObjectTest$WhenSearchingProductsByKeyword","withoutPageObjects","Without Page Objects",""
+"passed","Wed Apr 16 09:59:30 UTC 2025","Wed Apr 16 09:59:31 UTC 2025","743","","Locating elements by Labels and Placeholders","","org.sashiba.PlaywrightLocatorsTest$LocatingElementsByLabelsPlaceHolders","byLabel","Using a label",""
+"passed","Wed Apr 16 09:58:57 UTC 2025","Wed Apr 16 09:58:59 UTC 2025","2714","","Nested locators","","org.sashiba.PlaywrightLocatorsTest$NestedLocators","filteringMenuItemsByLocator","filtering locators by locator",""
+"passed","Wed Apr 16 09:59:42 UTC 2025","Wed Apr 16 09:59:43 UTC 2025","1092","","Contact form","","org.sashiba.toolshop.contact.ContactFormTest","invalidEmailField","The email address must be correctly formatted 'not-an-email' should be rejected",""
+"passed","Wed Apr 16 09:59:25 UTC 2025","Wed Apr 16 09:59:27 UTC 2025","2130","","Locating elements by role","","org.sashiba.PlaywrightLocatorsTest$LocatingElementsByRole","byButton","Using the BUTTON role",""
+"passed","Wed Apr 16 09:59:29 UTC 2025","Wed Apr 16 09:59:31 UTC 2025","1367","","org.sashiba.PlaywrightCollectionsTest","","org.sashiba.PlaywrightCollectionsTest","findingLastMatchingItem","Finding the last matching item",""
+"passed","Wed Apr 16 09:59:07 UTC 2025","Wed Apr 16 09:59:09 UTC 2025","1714","","Locating visible elements","","org.sashiba.PlaywrightLocatorsTest$LocatingVisibleElements","locateVisibleAndInvisibleItems","Finding visible and invisible elements",""
+"passed","Wed Apr 16 09:58:14 UTC 2025","Wed Apr 16 09:58:15 UTC 2025","1220","","org.sashiba.AnAnnotatedPlaywrightTest","","org.sashiba.AnAnnotatedPlaywrightTest","pageTitleTest","pageTitleTest(Page)",""
+"passed","Wed Apr 16 09:59:37 UTC 2025","Wed Apr 16 09:59:39 UTC 2025","1735","","Locating elements by Text","","org.sashiba.PlaywrightLocatorsTest$LocatingElementsByText","byTitle","Using title",""
+"passed","Wed Apr 16 09:58:18 UTC 2025","Wed Apr 16 09:58:19 UTC 2025","1861","","Searching for products","","org.sashiba.toolshop.catalog.SearchForProductsTest","withoutPageObjects","Without Page Objects",""
+"passed","Wed Apr 16 09:58:15 UTC 2025","Wed Apr 16 09:58:17 UTC 2025","1042","","org.sashiba.AnAnnotatedPlaywrightTest","","org.sashiba.AnAnnotatedPlaywrightTest","searchFieldTest","searchFieldTest(Page)",""
+"passed","Wed Apr 16 09:59:18 UTC 2025","Wed Apr 16 09:59:19 UTC 2025","878","","Locating elements using CSS","","org.sashiba.PlaywrightLocatorsTest$LocatingElementsUsingCSS","byAttribute","By attribute",""
+"passed","Wed Apr 16 09:59:35 UTC 2025","Wed Apr 16 09:59:37 UTC 2025","2576","","Locating elements by Text","","org.sashiba.PlaywrightLocatorsTest$LocatingElementsByText","byAltText","Using alt text",""
+"passed","Wed Apr 16 10:00:05 UTC 2025","Wed Apr 16 10:00:06 UTC 2025","1091","","Contact form","","org.sashiba.toolshop.contact.ContactFormTest","mandatoryFields","Mandatory fields [4] fieldName=Message",""
+"passed","Wed Apr 16 09:58:22 UTC 2025","Wed Apr 16 09:58:24 UTC 2025","2699","","org.sashiba.login.RegisterUserAPITest","","org.sashiba.login.RegisterUserAPITest","firstNameIsMandatory","firstNameIsMandatory()",""
+"passed","Wed Apr 16 09:59:10 UTC 2025","Wed Apr 16 09:59:11 UTC 2025","1523","","org.sashiba.PlaywrightWaitsTest.AutomaticWaits","","org.sashiba.PlaywrightWaitsTest$AutomaticWaits","shouldWaitForTheFilterCheckboxes","Should wait for the filter checkbox options to appear before clicking",""
+"passed","Wed Apr 16 09:59:12 UTC 2025","Wed Apr 16 09:59:15 UTC 2025","2850","","Locating elements by text using CSS","","org.sashiba.PlaywrightLocatorsTest$LocatingElementsByTextUsingCSS","locateAProductItemByText","Using :text",""
+"passed","Wed Apr 16 09:59:01 UTC 2025","Wed Apr 16 09:59:03 UTC 2025","1763","","Nested locators","","org.sashiba.PlaywrightLocatorsTest$NestedLocators","locatingAMenuItemUsingRolesAndOtherStrategies","Using roles with other strategies",""
+"failed","Wed Apr 16 09:58:14 UTC 2025","Wed Apr 16 09:58:16 UTC 2025","1951","","Searching for products","","org.sashiba.toolshop.catalog.SearchForProductsTest","whenSearchingByKeywordFail","When there are matching results - failed test",""
+"passed","Wed Apr 16 09:59:09 UTC 2025","Wed Apr 16 09:59:10 UTC 2025","919","","Locating elements by text using CSS","","org.sashiba.PlaywrightLocatorsTest$LocatingElementsByTextUsingCSS","locateTheSendButtonByText","Using :has-text",""
+"passed","Wed Apr 16 09:59:10 UTC 2025","Wed Apr 16 09:59:12 UTC 2025","2290","","Locating elements by text using CSS","","org.sashiba.PlaywrightLocatorsTest$LocatingElementsByTextUsingCSS","locateAProductItemByTextIs","Using :text-is",""
+"passed","Wed Apr 16 09:58:47 UTC 2025","Wed Apr 16 09:58:49 UTC 2025","1774","","org.sashiba.PlaywrightRestAPITest.MakingAPICalls","","org.sashiba.PlaywrightRestAPITest$MakingAPICalls","checkKnownProducts","Check presence of known products Checking product Product[name=Open-end Spanners (Set), price=38.51]",""
+"passed","Wed Apr 16 09:58:54 UTC 2025","Wed Apr 16 09:58:54 UTC 2025","849","","Making assertions about the contents of a field","","org.sashiba.PlaywrightAssertionsTest$LocatingElementsUsingCSS","dropdownFieldValues","Checking the value of a dropdown field",""
+"passed","Wed Apr 16 09:58:53 UTC 2025","Wed Apr 16 09:58:54 UTC 2025","932","","Playwright allows us to mock out API responses","","org.sashiba.PlaywrightRestAPITest$MockingAPIResponses","whenASingleItemIsFound","When a search returns a single product",""
+"passed","Wed Apr 16 09:59:21 UTC 2025","Wed Apr 16 09:59:23 UTC 2025","1319","","Interacting with text fields","","org.sashiba.PlaywrightFormsTest$WhenInteractingWithTextFields","mandatoryFields","Mandatory fields [1] fieldName=First name",""
+"passed","Wed Apr 16 09:58:51 UTC 2025","Wed Apr 16 09:58:52 UTC 2025","1095","","Making assertions about data values","","org.sashiba.PlaywrightAssertionsTest$MakingAssertionsAboutDataValues","allProductPricesShouldBeCorrectValues","allProductPricesShouldBeCorrectValues()",""
+"passed","Wed Apr 16 09:58:54 UTC 2025","Wed Apr 16 09:58:54 UTC 2025","802","","Playwright allows us to mock out API responses","","org.sashiba.PlaywrightRestAPITest$MockingAPIResponses","whenNoItemsAreFound","When a search returns no products",""
+"passed","Wed Apr 16 09:58:59 UTC 2025","Wed Apr 16 09:59:01 UTC 2025","1707","","Nested locators","","org.sashiba.PlaywrightLocatorsTest$NestedLocators","locatingAMenuItemUsingRoles","Using roles",""
+"broken","Wed Apr 16 10:01:01 UTC 2025","Wed Apr 16 10:01:03 UTC 2025","2467","","Product Catalog","","Sally sorts by different criteria","","Sally sorts by different criteria","  As a customer,
+  I want to easily search, filter and sort products in the catalog
+  So that I can find what I need quickly.
+
+  Sally is an online customer"
+"passed","Wed Apr 16 09:59:13 UTC 2025","Wed Apr 16 09:59:14 UTC 2025","1470","","org.sashiba.PlaywrightWaitsTest.WaitingForState","","org.sashiba.PlaywrightWaitsTest$WaitingForState","shouldShowAllProductNames","shouldShowAllProductNames()",""
+"passed","Wed Apr 16 09:58:56 UTC 2025","Wed Apr 16 09:58:56 UTC 2025","670","","org.sashiba.ASimplePlaywrightTest","","org.sashiba.ASimplePlaywrightTest","searchFieldTest","searchFieldTest()",""
+"passed","Wed Apr 16 09:58:17 UTC 2025","Wed Apr 16 09:58:25 UTC 2025","8454","","org.sashiba.PlaywrightPageObjectTest.WhenAddingItemsToTheCart","","org.sashiba.PlaywrightPageObjectTest$WhenAddingItemsToTheCart","whenCheckingOutMultipleItems","whenCheckingOutMultipleItems()",""
+"passed","Wed Apr 16 09:58:24 UTC 2025","Wed Apr 16 09:58:25 UTC 2025","656","","org.sashiba.login.RegisterUserAPITest","","org.sashiba.login.RegisterUserAPITest","shouldRegisterUser","shouldRegisterUser()",""
+"passed","Wed Apr 16 09:57:58 UTC 2025","Wed Apr 16 09:58:14 UTC 2025","16524","","Searching for products","","org.sashiba.toolshop.catalog.SearchForProductsTest","whenSearchingByKeyword","When there are matching results",""
+"passed","Wed Apr 16 09:59:20 UTC 2025","Wed Apr 16 09:59:21 UTC 2025","884","","Interacting with text fields","","org.sashiba.PlaywrightFormsTest$WhenInteractingWithTextFields","fileUploads","File uploads",""
+"passed","Wed Apr 16 09:58:25 UTC 2025","Wed Apr 16 09:58:28 UTC 2025","2862","","org.sashiba.login.LoginWithRegisteredUserTest","","org.sashiba.login.LoginWithRegisteredUserTest","shouldRejectUserWithInvalidPassword","Should reject a user if they provide a wrong password",""
+"passed","Wed Apr 16 09:59:00 UTC 2025","Wed Apr 16 09:59:10 UTC 2025","9158","","org.sashiba.PlaywrightWaitsTest.WaitingForElementsToAppearAndDisappear","","org.sashiba.PlaywrightWaitsTest$WaitingForElementsToAppearAndDisappear","shouldDisplayToasterMessage","It should display a toaster message when an item is added to the cart",""
+"passed","Wed Apr 16 09:58:38 UTC 2025","Wed Apr 16 09:58:40 UTC 2025","1947","","org.sashiba.PlaywrightRestAPITest.MakingAPICalls","","org.sashiba.PlaywrightRestAPITest$MakingAPICalls","checkKnownProducts","Check presence of known products Checking product Product[name=Claw Hammer with Fiberglass Handle, price=20.14]",""
+"passed","Wed Apr 16 09:59:23 UTC 2025","Wed Apr 16 09:59:25 UTC 2025","1900","","Locating elements by role","","org.sashiba.PlaywrightLocatorsTest$LocatingElementsByRole","byCheckboxes","Identifying checkboxes",""
+"passed","Wed Apr 16 09:59:14 UTC 2025","Wed Apr 16 09:59:16 UTC 2025","1435","","org.sashiba.PlaywrightWaitsTest.WaitingForState","","org.sashiba.PlaywrightWaitsTest$WaitingForState","shouldShowAllProductImages","shouldShowAllProductImages()",""
+"passed","Wed Apr 16 09:59:44 UTC 2025","Wed Apr 16 09:59:45 UTC 2025","1118","","Contact form","","org.sashiba.toolshop.contact.ContactFormTest","invalidEmailField","The email address must be correctly formatted 'notanemail' should be rejected",""
+"passed","Wed Apr 16 10:00:46 UTC 2025","Wed Apr 16 10:00:56 UTC 2025","10465","","Shopping Cart - Annotated","","org.sashiba.toolshop.catalog.AddToCartAnnotatedTest","withoutPageObjects","Without Page Objects",""
+"passed","Wed Apr 16 09:59:43 UTC 2025","Wed Apr 16 09:59:49 UTC 2025","5249","","Shopping Cart","","org.sashiba.toolshop.catalog.AddToCartTest","whenCheckingOutASingleItem","Checking for single item",""
+"passed","Wed Apr 16 09:58:25 UTC 2025","Wed Apr 16 09:58:37 UTC 2025","11785","","org.sashiba.PlaywrightPageObjectTest.WhenAddingItemsToTheCart","","org.sashiba.PlaywrightPageObjectTest$WhenAddingItemsToTheCart","withoutPageObjects","Without Page Objects",""
+"failed","Wed Apr 16 09:59:57 UTC 2025","Wed Apr 16 10:00:03 UTC 2025","6048","","Contact form","","org.sashiba.toolshop.contact.ContactFormTest","mandatoryFields","Mandatory fields [2] fieldName=Last name",""
+"passed","Wed Apr 16 09:59:31 UTC 2025","Wed Apr 16 09:59:32 UTC 2025","1294","","org.sashiba.PlaywrightCollectionsTest","","org.sashiba.PlaywrightCollectionsTest","countingItemsOnThePage","Counting items in a list",""
+"passed","Wed Apr 16 09:58:44 UTC 2025","Wed Apr 16 09:58:45 UTC 2025","1695","","org.sashiba.PlaywrightRestAPITest.MakingAPICalls","","org.sashiba.PlaywrightRestAPITest$MakingAPICalls","checkKnownProducts","Check presence of known products Checking product Product[name=Adjustable Wrench, price=20.33]",""
